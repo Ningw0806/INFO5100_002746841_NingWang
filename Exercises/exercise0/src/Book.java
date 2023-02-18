@@ -17,7 +17,7 @@ public class Book {
         this.pages = pages;
         this.price = price;
         this.hardcover = hardcover;
-        System.out.println("Created a new book: " + title);
+        System.out.println("A new book: " + title + "; Author: " + author + ".");
     }
 
     public String getTitle() {
@@ -61,7 +61,7 @@ public class Book {
             this.reviewer = reviewer;
             this.comment = comment;
             this.rating = rating;
-            System.out.println("Created a new review by " + reviewer);
+            System.out.println("A new review by " + reviewer + ", said: " + comment);
         }
 
         public String getReviewer() {
@@ -102,14 +102,13 @@ public class Book {
         }
     }
 
-
     public static void main(String[] args) {
         Book b1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925, "Charles Scribner's Sons", "978-0-7432-7356-5", 180, 9.99, true);
         Book b2 = new Book("To Kill a Mockingbird", "Harper Lee", 1960, "J. B. Lippincott & Co.", "978-0-06-112008-4", 281, 12.50, true);
         Book b3 = new Book("The Catcher in the Rye", "J. D. Salinger", 1951, "Little, Brown and Company", "978-0-316-76948-8", 224, 8.99, true);
 
         Book.Review r1 = new Book.Review("John Smith", "Great book, highly recommend!", 5);
-        Book.Review r2 = new Book.Review("Jane Doe", "Disappointing ending, but still worth reading", 3);
+        Book.Review r2 = new Book.Review("Jane Doe", "Disappointing ending, but still worth reading.", 3);
         Book.Review r3 = new Book.Review("Bob Johnson", "Couldn't put it down!", 4);
 
         Book.Chapter c1 = new Book.Chapter("Chapter 1: The Party", 1, 10);
